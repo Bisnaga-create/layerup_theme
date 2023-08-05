@@ -1,0 +1,17 @@
+{
+    "name": "layerup/tema",
+    "description": "Tema que permitirá filtrar os posts por suas categorias via ajax.",
+    "license": "MIT License",
+    "autoload": {
+        "psr-4": {
+            "Layerup\\Tema\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Pereira",
+            "email": "guinovembro43@gmail.com"
+        }
+    ],
+    "require": {}
+}
