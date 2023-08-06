@@ -11,6 +11,7 @@ class Enqueue{
     public static function init(){
         add_action( 'wp_enqueue_scripts', array(self::class,'load_css') );
         add_action( 'wp_enqueue_scripts', array(self::class,'load_js') );
+        add_action( 'wp_head', array(self::class,'load_metas') );
     }
 
     /**
@@ -31,5 +32,13 @@ class Enqueue{
             'bootstrap5-js',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',   
         );
+    }
+
+    /**
+     * Loads metas.
+     */
+    public static function load_metas(){
+        //Loading viewport meta so the css works correctly on mobile screens.
+        echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
     }
 }

@@ -12,6 +12,7 @@ class Init{
      */
     public static function init(){
         self::define_constants();
+
         Enqueue::init();
 
         //calling wp head to load styles and scripts.

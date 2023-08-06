@@ -1,8 +1,6 @@
 <?php 
 namespace Layerup\Tema\Controllers;
 
-use Layerup\Tema\Models\Post;
-
 /**
  * Class responsible for defining which templates should be loaded.
  */
@@ -28,14 +26,7 @@ class TemplatesController{
      */
     private function load_home(){
         //getting all posts and sending them to the Model.
-        $posts = PostsController::get_all();
-
-        //Turning the posts into models.
-        $usable_posts = array();
-
-        foreach($posts as $single_post){
-            $usable_posts[] = new Post($single_post);
-        }
+        $usable_posts = PostsController::get_all();
 
         $this->load_navbar();
 

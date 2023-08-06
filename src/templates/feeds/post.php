@@ -1,5 +1,6 @@
 <?php
 list($queried_post) = $args;
+$template_path = LAYERUP_THEME_TEMPLATES_ROOT;
 ?>
 
 <div class="card">
@@ -8,7 +9,18 @@ list($queried_post) = $args;
     <?php endif; ?>
     <div class="card-body">
         <h5 class="card-title"><?php echo $queried_post->title; ?></h5>
-        <p class="card-text"><?php echo $queried_post->excerpt; ?></p>
-        <a href="<?php echo $queried_post->url; ?>" class="btn btn-primary">Read more</a>
+        <p class="card-text">
+            <?php echo $queried_post->excerpt; ?>
+        </p>
+
+        <?php 
+            get_template_part(
+                $template_path . '/grids/categories',
+                null,
+                array($queried_post->categories)
+            );
+        ?>
+        
+        <a href="<?php echo $queried_post->url; ?>" class="btn btn-primary" target='blank'>Leia mais</a>
     </div>
 </div>

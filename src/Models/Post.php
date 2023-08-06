@@ -2,6 +2,8 @@
 
 namespace Layerup\Tema\Models;
 
+use Layerup\Tema\Controllers\CategoriesController;
+
 /**
  * Defines the model of a post.
  */
@@ -47,6 +49,13 @@ class Post{
      * @var string $thumbnail.
      */
     public $thumbnail;
+
+    /**
+     * Post categories.
+     * 
+     * @var string $categories.
+     */
+    public $categories;
     
     /**
      * Constructor method.
@@ -60,6 +69,7 @@ class Post{
         $this->content = $post->post_content;
         $this->excerpt = $this->sanitize_excerpt($post->post_excerpt);
         $this->thumbnail = $this->get_thumbnail();
+        $this->categories = (new CategoriesController())->get_by_post($this->id);
     }
 
     /**
