@@ -1,6 +1,8 @@
 <?php 
 namespace Layerup\Tema\Controllers;
 
+use Layerup\Tema\Controllers\CategoriesController;
+
 /**
  * Class responsible for defining which templates should be loaded.
  */
@@ -25,10 +27,17 @@ class TemplatesController{
      * Loads the website home.
      */
     private function load_home(){
-        //getting all posts and sending them to the Model.
         $usable_posts = PostsController::get_all();
 
+        $usable_categories = (new CategoriesController())->get_all();
+
         $this->load_navbar();
+
+        get_template_part(
+            self::TEMPLATE . '/sections/categories-filter',
+            null,
+            array($usable_categories)
+        );
 
         get_template_part(
             self::TEMPLATE . '/grids/posts',

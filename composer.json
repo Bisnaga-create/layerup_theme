@@ -13,5 +13,8 @@
             "email": "guinovembro43@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts": {
+        "build:assets": "npx webpack --mode=production"
+    }
 }

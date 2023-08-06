@@ -32,6 +32,12 @@ class Enqueue{
             'bootstrap5-js',
             'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',   
         );
+
+        //Recovering our own scripts. 
+        wp_enqueue_script(
+            'layerup-theme-js',
+            LAYERUP_THEME_URI . '/src/assets/js/main.js',   
+        );
     }
 
     /**

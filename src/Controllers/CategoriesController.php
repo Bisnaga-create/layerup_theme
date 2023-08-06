@@ -1,12 +1,12 @@
 <?php 
 namespace Layerup\Tema\Controllers;
 
-use Layerup\Tema\Controllers\TaxonomiesController;
+use Layerup\Tema\Controllers\TermsController;
 
 /**
  * Class responsible for creating the category operations.
  */
-class CategoriesController extends TaxonomiesController{
+class CategoriesController extends TermsController{
 
     /**
      * Constructor Method.
