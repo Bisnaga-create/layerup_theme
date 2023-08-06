@@ -1,7 +1,7 @@
 <?php
 namespace Layerup\Tema\Setup;
 
-use Layerup\Tema\Controllers\TemplateController;
+use Layerup\Tema\Controllers\TemplatesController;
 
 /**
  * Class reponsible for calling all the classes when needed.
@@ -16,8 +16,8 @@ class Init{
 
         //calling wp head to load styles and scripts.
         do_action( 'wp_head' );
-        
-        new TemplateController();
+
+        new TemplatesController();
     }
 
     /**

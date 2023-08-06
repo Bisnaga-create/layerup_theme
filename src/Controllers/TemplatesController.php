@@ -1,10 +1,12 @@
 <?php 
 namespace Layerup\Tema\Controllers;
 
+use Layerup\Tema\Models\Post;
+
 /**
- * Class resposnsible for defining which templates should be loaded.
+ * Class responsible for defining which templates should be loaded.
  */
-class TemplateController{
+class TemplatesController{
     /**
      * The template folder name. Created so there is no
      * need to use the long name.
@@ -25,15 +27,32 @@ class TemplateController{
      * Loads the website home.
      */
     private function load_home(){
-        $this->load_header();
+        //getting all posts and sending them to the Model.
+        $posts = PostsController::get_all();
+
+        //Turning the posts into models.
+        $usable_posts = array();
+
+        foreach($posts as $single_post){
+            $usable_posts[] = new Post($single_post);
+        }
+
+        $this->load_navbar();
+
+        get_template_part(
+            self::TEMPLATE . '/grids/posts',
+            null,
+            array($usable_posts)
+        );
+
         $this->load_footer();
     }
 
     /**
-     * Loads the website header.
+     * Loads the website navbar.
      */
-    private function load_header(){
-        $path = self::TEMPLATE.'/common/header';
+    private function load_navbar(){
+        $path = self::TEMPLATE . '/common/navbar';
         get_template_part($path);
     }
 
@@ -41,7 +60,7 @@ class TemplateController{
      * Loads the website footer.
      */
     private function load_footer(){
-        $path = self::TEMPLATE.'/common/footer';
+        $path = self::TEMPLATE . '/common/footer';
         $args = array(
             date('Y'),
         );
