@@ -20,6 +20,9 @@ class TemplatesController{
         //Testing for home.
         if(is_front_page() || is_home()){
             $this->load_home();
+        }else{
+            //Showing message that other pages were not created.
+            $this->load_not_done();
         }
     }
 
@@ -66,5 +69,18 @@ class TemplatesController{
         );
 
         get_template_part($path,null,$args);
+    }
+
+    /**
+     * Loads the not done template.
+     */
+    private function load_not_done(){
+        $this->load_navbar();
+
+        $path = self::TEMPLATE . '/sections/not-done';
+
+        get_template_part($path);
+
+        $this->load_footer();
     }
 } 

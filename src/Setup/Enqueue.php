@@ -50,6 +50,6 @@ class Enqueue{
         echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
         
         //Loading a link with the website default url so it can be recovered on the front end.
-        echo "<link rel='default_url' href=" . get_bloginfo('url') . ">";
+        echo "<link rel='default_url' href=" . LAYERUP_SITE_ROOT_URI . ">";
     }
 }

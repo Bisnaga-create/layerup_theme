@@ -40,6 +40,7 @@ class Init{
         define('LAYERUP_THEME_PATH', get_stylesheet_directory());
         define('LAYERUP_THEME_URI', get_stylesheet_directory_uri());
         define('LAYERUP_THEME_TEMPLATES_ROOT','src/templates');
+        define('LAYERUP_SITE_ROOT_URI', get_bloginfo('url'));
     }
 
     /**
