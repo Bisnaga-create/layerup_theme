@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "f62e8a5a-2108-4389-8c00-abb4765f8e4e",
+		"name": "Posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12133630",
+		"_collection_link": "https://www.postman.com/guilhermepereiraribeiro/workspace/layerup/collection/12133630-f62e8a5a-2108-4389-8c00-abb4765f8e4e?action=share&creator=12133630&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "get all categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prefix}}/get_all_categories",
+					"host": [
+						"{{prefix}}"
+					],
+					"path": [
+						"get_all_categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get post by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prefix}}/get_by_category?slug=teste",
+					"host": [
+						"{{prefix}}"
+					],
+					"path": [
+						"get_by_category"
+					],
+					"query": [
+						{
+							"key": "slug",
+							"value": "teste"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prefix}}/get_all_posts",
+					"host": [
+						"{{prefix}}"
+					],
+					"path": [
+						"get_all_posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "prefix",
+			"value": "http://localhost/layerup_teste/wp-json/layerup/v1"
+		}
+	]
+}

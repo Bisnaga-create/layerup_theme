@@ -71,7 +71,7 @@ Se você tiver alguma dúvida, problema ou sugestão relacionada ao tema, sinta-
 
 ## Documentação da api
 
-Para visualizar a api com as rotas costumizadas deste projeto, você pode acessar a documentação de rotas:
+Para visualizar a api com as rotas costumizadas deste projeto, você pode importar o arquivo routes.json (nesta mesma pasta) em seu postman. De tal forma conseguirá ver as rotas existentes.
 
 ## Licença
 
