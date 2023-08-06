@@ -14,6 +14,7 @@ class Init{
     public static function init(){
         add_action('template_redirect', array(self::class,'load_classes'));   
         self::load_api();
+        self::gutenberg_options();
     }
 
     /**
@@ -22,6 +23,7 @@ class Init{
     public static function load_classes(){
         self::define_constants();
 
+        //Calling scripts and styles.
         Enqueue::init();
 
         //calling wp head to load styles and scripts.
@@ -46,5 +48,13 @@ class Init{
     public static function load_api(){
         //Initiating api.
         ApiInit::init();
+    }
+
+    /**
+     * Sets the gutenberg options.
+     */
+    public static function gutenberg_options(){
+        //Adding support to inserting thumbnails in posts.
+        add_theme_support( 'post-thumbnails' ); 
     }
 }

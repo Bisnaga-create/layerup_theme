@@ -1,4 +1,4 @@
-import '../api/Posts';
+import { make_request } from "../api/Posts";
 
 window.addEventListener('load', () => {
     remove_unused_categories();
@@ -26,8 +26,12 @@ function add_events(){
 
     anchors.forEach((anchor) => {
         anchor.addEventListener('click', (event) => {
+            //Preventing the user from being redirected to another page.
             event.preventDefault();
-            alert('clicou aqui');
+            const slug = anchor.getAttribute('id');
+
+            //Getting the information about the posts.
+            const posts = make_request(slug);
         });
     });
 }

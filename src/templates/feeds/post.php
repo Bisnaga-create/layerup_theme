@@ -10,7 +10,7 @@ $template_path = LAYERUP_THEME_TEMPLATES_ROOT;
     <div class="card-body">
         <h5 class="card-title"><?php echo $queried_post->title; ?></h5>
         <p class="card-text">
-            <?php echo $queried_post->excerpt; ?>
+            <?php echo wp_strip_all_tags($queried_post->excerpt); ?>
         </p>
 
         <?php 

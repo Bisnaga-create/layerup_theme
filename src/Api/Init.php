@@ -2,6 +2,7 @@
 namespace Layerup\Tema\Api;
 
 use Layerup\Tema\Api\Posts;
+use Layerup\Tema\Api\Categories;
 
 /**
  * Class reponsible for calling all the api classes when needed.
@@ -19,5 +20,6 @@ class Init{
      */
     public static function call_api(){
         (new Posts())->register_routes();
+        (new Categories())->register_routes();
     }
 }

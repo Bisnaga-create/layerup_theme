@@ -39,7 +39,7 @@ class Posts{
             $id = $request->get_param('id');
             $slug = $request->get_param('slug');
             $args = array(
-                'mumberposts' => -1,
+                'numberposts' => -1,
                 'post_type' => 'post'
             );
             
@@ -65,7 +65,7 @@ class Posts{
                 PostsController::filter($args)
             );
         }catch(\Exception $e){
-            return new \WP_Error('post_creation_failed', __($e->getMessage()), array('status' => 400));
+            return new \WP_Error('falha_ao_filtrar', __($e->getMessage()), array('status' => 400));
         }
     }
 }
