@@ -65,7 +65,7 @@ class Post{
     public function __construct($post){
         $this->title = $post->post_title;
         $this->id = $post->ID;
-        $this->url = $post->guid;
+        $this->url = get_permalink($this->id);
         $this->content = $post->post_content;
         $this->excerpt = $this->sanitize_excerpt($post->post_excerpt);
         $this->thumbnail = $this->get_thumbnail();
