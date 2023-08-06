@@ -8,7 +8,7 @@ import { update_posts } from "../Content/PostsSection";
  * @return {object|void} The post object on success and void (console.error) on failure.
  */
 export function make_request(slug){
-    //Using a href previously added url.
+    //Using a href previously added.
     let default_url = document.querySelector('link[rel="default_url"]').href;
 
     if(0 === default_url.length){
