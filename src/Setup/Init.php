@@ -36,7 +36,7 @@ class Init{
      * Defines the system constants for the theme.
      */
     private static function define_constants(){
-        define('LAYERUP_THEME_VERSION','0.0.1');
+        define('LAYERUP_THEME_VERSION','1.0.0');
         define('LAYERUP_THEME_PATH', get_stylesheet_directory());
         define('LAYERUP_THEME_URI', get_stylesheet_directory_uri());
         define('LAYERUP_THEME_TEMPLATES_ROOT','src/templates');
