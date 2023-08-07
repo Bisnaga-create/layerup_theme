@@ -32,10 +32,6 @@ class Posts{
         register_rest_route(self::PREFIX, 'get_all_posts', array(
             'methods'  => 'GET',
             'callback' => array($this, 'get_all_categories'),
-            'args'     => array(
-                'id' => array(),
-                'slug' => array(),
-            ),
         ));
     }
 

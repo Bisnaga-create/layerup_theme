@@ -20,10 +20,6 @@ class Categories{
         register_rest_route(self::PREFIX, 'get_all_categories', array(
             'methods'  => 'GET',
             'callback' => array($this, 'get_all_categories'),
-            'args'     => array(
-                'id' => array(),
-                'slug' => array(),
-            ),
         ));
     }
 
