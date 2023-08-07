@@ -67,7 +67,7 @@ O tema WordPress Layer Up é um tema simples e responsivo, desenvolvido para ate
 
 ## Suporte
 
-Se você tiver alguma dúvida, problema ou sugestão relacionada ao tema, sinta-se à vontade para entrar em contato conosco através de meu email(guinovembro43@gmail.com).
+Se você tiver alguma dúvida, problema ou sugestão relacionada ao tema, sinta-se à vontade para entrar em contato comigo através de meu email(guinovembro43@gmail.com).
 
 ## Documentação da api
 
